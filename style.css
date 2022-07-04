@@ -1,0 +1,32 @@
+.color
+{
+    border: 1px solid;
+    border-color: black;
+    padding: 40px;
+}
+
+#color-palette
+{
+    margin-top: 150px; 
+  display: inline-flex;
+}
+
+.cor1
+{
+    background-color: red;
+}
+
+.cor2
+{
+    background-color: aqua;
+}
+
+.cor3
+{
+    background-color: blue;
+}
+
+.cor4
+{
+    background-color: chartreuse;
+}
