@@ -11,22 +11,22 @@
   display: inline-flex;
 }
 
-.cor1
+.black
 {
     background-color: black;
 }
 
-.cor2
+.cyan
 {
     background-color: aqua;
 }
 
-.cor3
+.purple
 {
     background-color: blue;
 }
 
-.cor4
+.green
 {
     background-color: chartreuse;
 }
@@ -45,7 +45,16 @@
 #pixel-board
 {
     margin-top: 8%;
+    width: 20%;
+   
+}
+
+.selected
+{
     
-    max-width: 20%;
-   position:absolute;
+}
+
+li 
+{ 
+    list-style-type: none; 
 }
