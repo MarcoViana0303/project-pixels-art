@@ -5,6 +5,9 @@ let copiarGreen = window.document.querySelector(".green");
 const botaoLimpar = document.getElementById("clear-board");
 const pixels = document.getElementsByClassName("pixel");
 const divMae = document.querySelector("#pixel-board")
+const palette = document.getElementsByClassName("color")
+
+let cor = undefined;
 
 // Caso selecione a cor preta
 copiarBlack.addEventListener("click", function () {
@@ -12,6 +15,7 @@ copiarBlack.addEventListener("click", function () {
     copiarPurple.classList.remove("selected");
     copiarGreen.classList.remove("selected");
     copiarBlack.classList.add("selected");
+
 })
 
 // Caso selecione a cor cyan
@@ -20,6 +24,7 @@ copiarCyan.addEventListener("click", function () {
     copiarPurple.classList.remove("selected");
     copiarGreen.classList.remove("selected");
     copiarCyan.classList.add("selected");
+
 })
 
 // Caso selecione a cor purple
@@ -28,6 +33,7 @@ copiarPurple.addEventListener("click", function () {
     copiarBlack.classList.remove("selected");
     copiarGreen.classList.remove("selected");
     copiarPurple.classList.add("selected");
+
 })
 
 // Caso selecione a cor green
@@ -42,7 +48,7 @@ copiarGreen.addEventListener("click", function () {
 function adicionarDiv() {
    
    
-    for (let index = 1; index < 25; index += 1) {
+    for (let index = 0; index < 25; index += 1) {
         const divFilha = document.createElement("div");
         divFilha.className ="pixel";
         divMae.appendChild(divFilha);
@@ -51,13 +57,11 @@ function adicionarDiv() {
 }
 adicionarDiv();
 
-    // Deixa a cor do click inicialmente preta
-   /* window.onload(function()
-    {
-       const preto = window.document.querySelector(".black");
-       preto.style.backgroundColor = "red";
-    }) */
-
+    // Pinta algum pixel
+    
+    divMae.addEventListener("click", function pintarPixel(event) {
+        event.target.style.backgroundColor = cor;
+    });
  
     // Limpa as cores do pixel e retorna ao branco
   
@@ -72,5 +76,20 @@ adicionarDiv();
 
 
 
+// Pega a cor de algum background do palette
+    function pegarCor() {
+        
+        for (let index = 0; index < palette.length; index+= 1) {
+            palette[index].addEventListener("click", function () {
+                cor = window.getComputedStyle(palette[index]).backgroundColor;
+               
+            })
+              }
+            }    
+pegarCor();
 
+// Cor inicial
+window.onload = function () {
+    cor = window.getComputedStyle(palette[0]).backgroundColor 
+}
 

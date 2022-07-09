@@ -18,7 +18,7 @@
 
 .cyan
 {
-    background-color: aqua;
+    background-color: cyan;
 }
 
 .purple
@@ -35,7 +35,7 @@
     border: 1px solid;
     border-color: black;
     float: left;
-    background-color: rgb(0, 255, 255);
+    background-color: rgb(255, 255, 255);
     height: 40px;
     margin-left: 5px;
     width: 40px;
@@ -47,11 +47,6 @@
     margin-top: 8%;
     width: 20%;
    position: absolute;
-}
-
-.selected
-{
-    
 }
 
 li 
